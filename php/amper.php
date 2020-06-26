@@ -55,12 +55,15 @@ limitations under the License.
 		<meta property="og:url" content="<?php echo $page->permalink(); ?>" />
 		<meta property="og:description" content="<?php echo htmlspecialchars( substr( strip_tags( $page->description() ), 0, 150 ) ) ?>" />
 		<meta property="article:published_time" content="<?php echo date ( 'c', strtotime( $page->dateRaw() ) ) ?>" />
+		echo '<meta property="article:author" content="' . $site->title() . '" />' . PHP_EOL;
+		echo '<meta property="article:publisher" content="@' . $site->title() . '" />' . PHP_EOL;
 		<?php if ($page->dateModified()): ?>
 		<meta property="article:modified_time" content="<?php echo date ( 'c', strtotime( $page->dateModified() ) ) ?>" />
 		<?php endif ?>
 		<meta property="og:site_name" content="<?php echo htmlspecialchars( $site->title() ) ?>" />
 		<?php if ($page->coverImage()): ?>
 		<meta property="og:image" content="<?php echo $page->coverImage(); ?>" />
+		echo '<link rel="image_src" href="' . $page->coverImage() . '"/>' . PHP_EOL;
 		<?php list($img_width, $img_height) = @getimagesize($page->coverImage());
 		if ( !empty($img_width) && !empty($img_height) ) :?>
 		<meta property="og:image:width" content="<?=$img_width;?>" />
@@ -69,12 +72,6 @@ limitations under the License.
 		<?php endif ?>
 		<meta property="og:locale" content="<?php echo "en"; ?>" />
 		<meta name="twitter:text:title" content="<?php echo htmlspecialchars( $page->title() ) ?>" />
-		<?php
-		if($page->coverImage()){
-		echo '<link rel="image_src" href="' . $page->coverImage() . '"/>' . PHP_EOL;
-		echo '<meta property="og:image" content="' . $page->coverImage() . '">' . PHP_EOL;
-		}
-		?>
 		<!--Meta block END-->
 		<?php
 		//Analytics block START, if you want me not to find out and be happy that my plugin is popular, you may change the value of the $happiness variable to 0;
