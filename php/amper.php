@@ -63,7 +63,7 @@ limitations under the License.
 		<meta property="og:site_name" content="<?php echo htmlspecialchars( $site->title() ) ?>" />
 		<?php if ($page->coverImage()): ?>
 		<meta property="og:image" content="<?php echo $page->coverImage(); ?>" />
-		echo '<link rel="image_src" href="' . $page->coverImage() . '"/>' . PHP_EOL;
+		<?php echo '<link rel="image_src" href="' . $page->coverImage() . '"/>' . PHP_EOL; ?>
 		<?php list($img_width, $img_height) = @getimagesize($page->coverImage());
 		if ( !empty($img_width) && !empty($img_height) ) :?>
 		<meta property="og:image:width" content="<?=$img_width;?>" />
