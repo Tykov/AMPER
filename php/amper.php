@@ -55,8 +55,8 @@ limitations under the License.
 		<meta property="og:url" content="<?php echo $page->permalink(); ?>" />
 		<meta property="og:description" content="<?php echo htmlspecialchars( substr( strip_tags( $page->description() ), 0, 150 ) ) ?>" />
 		<meta property="article:published_time" content="<?php echo date ( 'c', strtotime( $page->dateRaw() ) ) ?>" />
-		echo '<meta property="article:author" content="' . $site->title() . '" />' . PHP_EOL;
-		echo '<meta property="article:publisher" content="@' . $site->title() . '" />' . PHP_EOL;
+		<?php echo '<meta property="article:author" content="' . $site->title() . '" />' . PHP_EOL; ?>
+		<?php echo '<meta property="article:publisher" content="@' . $site->title() . '" />' . PHP_EOL; ?>
 		<?php if ($page->dateModified()): ?>
 		<meta property="article:modified_time" content="<?php echo date ( 'c', strtotime( $page->dateModified() ) ) ?>" />
 		<?php endif ?>
