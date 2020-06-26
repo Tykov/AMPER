@@ -36,6 +36,7 @@ limitations under the License.
 	$amp_tag .= '</amp-img>';
 	$html = str_replace($img_matches[0][$key], $amp_tag, $html);
 	}
+	$html = preg_replace("/<p([> ])/", '<p class="mb4 px3"$1', $html); //Class support
 	return $html;
 	}
 ?>
