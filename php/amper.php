@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!---
 Copyright 2017 The AMP Start Authors. All Rights Reserved.
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -46,33 +46,34 @@ limitations under the License.
 		<meta charset="utf-8">
 		<?php //echo Theme::metaTags('title'); ?>
 		<?php //echo Theme::metaTags('description'); ?>
-		<meta name="HandheldFriendly" content="True" />
+		<meta name="HandheldFriendly" content="True">
 		<meta name="description" content="<?php echo htmlspecialchars( $page->description() ) ?>">
-		<link rel="canonical" href="<?php echo $page->permalink(); ?>" />
+		<link rel="canonical" href="<?php echo $page->permalink(); ?>">
 		<!-- Open Graph Tags -->
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="<?php echo htmlspecialchars( $page->title() ) ?>" />
-		<meta property="og:url" content="<?php echo $page->permalink(); ?>" />
-		<meta property="og:description" content="<?php echo htmlspecialchars( substr( strip_tags( $page->description() ), 0, 150 ) ) ?>" />
-		<meta property="article:published_time" content="<?php echo date ( 'c', strtotime( $page->dateRaw() ) ) ?>" />
-		<?php echo '<meta property="article:author" content="' . $site->title() . '" />' . PHP_EOL; ?>
-		<?php echo '<meta property="article:publisher" content="@' . $site->title() . '" />' . PHP_EOL; ?>
+		<meta property="og:title" content="<?php echo htmlspecialchars( $page->title() ) ?>">
+		<meta property="og:url" content="<?php echo $page->permalink(); ?>">
+		<meta property="og:description" content="<?php echo htmlspecialchars( substr( strip_tags( $page->description() ), 0, 150 ) ) ?>">
+		<meta property="article:published_time" content="<?php echo date ( 'c', strtotime( $page->dateRaw() ) ) ?>">
+		<?php echo '<meta property="article:author" content="' . $site->title() . '">' . PHP_EOL; ?>
+		<?php echo '<meta property="article:publisher" content="@' . $site->title() . '">' . PHP_EOL; ?>
 		<meta name="keywords" content="<?php echo htmlspecialchars( $page->tags() ) ?>">
 		<?php if ($page->dateModified()): ?>
-		<meta property="article:modified_time" content="<?php echo date ( 'c', strtotime( $page->dateModified() ) ) ?>" />
+		<meta property="article:modified_time" content="<?php echo date ( 'c', strtotime( $page->dateModified() ) ) ?>">
 		<?php endif ?>
-		<meta property="og:site_name" content="<?php echo htmlspecialchars( $site->title() ) ?>" />
+		<meta property="og:site_name" content="<?php echo htmlspecialchars( $site->title() ) ?>">
 		<?php if ($page->coverImage()): ?>
-		<meta property="og:image" content="<?php echo $page->coverImage(); ?>" />
-		<?php echo '<link rel="image_src" href="' . $page->coverImage() . '"/>' . PHP_EOL; ?>
+		<meta property="og:image" content="<?php echo $page->coverImage(); ?>">
+		<?php echo '<link rel="image_src" href="' . $page->coverImage() . '">' . PHP_EOL; ?>
+		<meta property="og:image:secure_url" content="<?php echo $page->coverImage() . '">' . PHP_EOL; ?>
 		<?php list($img_width, $img_height) = @getimagesize($page->coverImage());
 		if ( !empty($img_width) && !empty($img_height) ) :?>
-		<meta property="og:image:width" content="<?=$img_width;?>" />
-		<meta property="og:image:height" content="<?=$img_height;?>" />
+		<meta property="og:image:width" content="<?=$img_width;?>">
+		<meta property="og:image:height" content="<?=$img_height;?>">
 		<?php endif ?>
 		<?php endif ?>
-		<meta property="og:locale" content="<?php echo "en"; ?>" />
-		<meta name="twitter:text:title" content="<?php echo htmlspecialchars( $page->title() ) ?>" />
+		<meta property="og:locale" content="<?php echo "en"; ?>">
+		<meta name="twitter:text:title" content="<?php echo htmlspecialchars( $page->title() ) ?>">
 		<!--Meta block END-->
 		<?php
 		//Analytics block START, if you want me not to find out and be happy that my plugin is popular, you may change the value of the $happiness variable to 0;
