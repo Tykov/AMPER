@@ -50,7 +50,7 @@ limitations under the License.
 		<meta name="description" content="<?php echo htmlspecialchars( $page->description() ) ?>">
 		<link rel="canonical" href="<?php echo $page->permalink(); ?>">
 		<!-- Open Graph Tags -->
-		<meta property="og:type" content="article" />
+		<meta property="og:type" content="article">
 		<meta property="og:title" content="<?php echo htmlspecialchars( $page->title() ) ?>">
 		<meta property="og:url" content="<?php echo $page->permalink(); ?>">
 		<meta property="og:description" content="<?php echo htmlspecialchars( substr( strip_tags( $page->description() ), 0, 150 ) ) ?>">
