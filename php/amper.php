@@ -102,7 +102,8 @@ else{
 <article class="recipe-article">
 <center>
 <header>
-<h1 class="mb1 px3"><?php echo $page->title(); ?></h1>
+<span class="ampstart-subtitle block px3 pt2 mb2"></span>
+<h1 class="mb1" style="word-wrap: break-word;word-break: normal; /* for Opera and FireFox */word-break: break-word; /* for Chrome */"><?php echo $page->title(); ?></h1>
 <!-- Start byline -->
 <address class="ampstart-byline clearfix mb4 px3 h5">
 <time class="ampstart-byline-pubdate block bold my1" datetime="<?php echo date ('c', strtotime( $page->dateRaw() ) ); ?>"><?php echo $postdate; ?></time>
@@ -117,7 +118,7 @@ echo _ampify_img($page->content());
 </main>
 <!-- Start Footer -->
 <footer class="ampstart-footer flex flex-column items-center px3 ">
-<center><a href="<?php echo $page->permalink(); ?>">View Desktop Version</a></div></center>
+<center><a href="<?php echo $page->permalink(); ?>">View Full Version</a></div></center>
 <small>
 <?php echo $site->title() . date(", Y"); ?>
 </small>
