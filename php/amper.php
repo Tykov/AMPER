@@ -118,7 +118,7 @@ echo _ampify_img($page->content());
 </main>
 <!-- Start Footer -->
 <footer class="ampstart-footer flex flex-column items-center px3 ">
-<center><a href="<?php echo $page->permalink(); ?>">View Full Version</a></div></center>
+<center><a href="<?php echo $page->permalink(); ?>">View Full Version</a></center>
 <small>
 <?php echo $site->title() . date(", Y"); ?>
 </small>
