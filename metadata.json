@@ -2,9 +2,9 @@
 	"author": "Constantine",
 	"email": "orchardman@evergarden.ru",
 	"website": "https://evergarden.ru/blog/amper",
-	"version": "1.0.0",
-	"releaseDate": "2020-26-06",
+	"version": "1.0.1",
+	"releaseDate": "2020-19-07",
 	"license": "MIT",
-	"compatible": "3.12.0",
+	"compatible": "3.13.0",
 	"notes": ""
 }
