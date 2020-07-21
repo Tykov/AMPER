@@ -37,7 +37,7 @@ limitations under the License.
 	}
 	$html = preg_replace("/<p([> ])/", '<p class="mb4 px3"$1', $html); //P text class support
 	$html = preg_replace("/<iframe([> ])/", '<amp-iframe layout="responsive" sandbox = "allow-presentation allow-scripts allow-same-origin allow-popups" frameborder="0"$1', $html); //Iframe support
-	$html = str_replace('</iframe>', '</amp-iframe>', $html); // Dirty way to do it
+	$html = str_replace('</iframe>', '<amp-img layout = "fill" src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAApJREFUCJljYAAAAAIAAfRxZKYAAAAASUVORK5CYII=" placeholder></amp-img></amp-iframe>', $html); // Dirty way to do it
 	return $html;
 	}
 ?>
