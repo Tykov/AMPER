@@ -14,7 +14,7 @@ limitations under the License.
 <?php
 	$amperV = "1.0.1";
 	$postdate = ((isset( $langDetails['dateFormat']) && !empty($langDetails['dateFormat'])) ? date($langDetails['dateFormat'], strtotime($page->dateRaw())) : $page->date());
-	function _ampify_img ($html) {
+	function _make_it_rain ($html) {
 	preg_match_all("#<img(.*?)\\/?>#", $html, $img_matches);
 	foreach ($img_matches[1] as $key => $img_tag) {
 	preg_match_all('/(alt|src|width|height)=["\'](.*?)["\']/i', $img_tag, $attribute_matches);
@@ -122,7 +122,7 @@ else{
 </center>
 <!-- End byline -->
 <?php
-echo _ampify_img($page->content());
+echo _make_it_rain($page->content());
 ?>
 </header>
 </article>
