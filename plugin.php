@@ -1,7 +1,6 @@
 <?php
 //Based on AMP.DEV html template
 //author: Constantine - evergarden.ru
-//version: 1.0.0
 	class AMPER extends Plugin {
 	public function beforeSiteLoad(){
 	global $url, $page, $site;
