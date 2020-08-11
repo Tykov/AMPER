@@ -96,6 +96,8 @@ if($happiness == 1 && is_numeric(trim(file_get_contents('https://raw.githubuserc
 @curl_setopt($ch, CURLOPT_TIMEOUT_MS, 600);
 @curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 1);
 @curl_setopt($ch, CURLOPT_NOBODY, true);
+@curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+@curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
 @curl_exec($ch);
 @curl_close($ch);
 }
