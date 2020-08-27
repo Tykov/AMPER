@@ -1,6 +1,7 @@
 <?php
 //Based on AMP.DEV html template
 //author: Constantine - evergarden.ru
+	if(!defined("BLUDIT")) { die("You seek for fresh air and peace of mind, Ivanov? I'm in the North, waiting for you."); }
 	class AMPER extends Plugin {
 	public function init(){
 	// Custom fields initialization
