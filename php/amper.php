@@ -12,6 +12,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 <?php
+	if(!defined("BLUDIT")) { die("If you see a deer on the way, take a picture for me. Have a good trip, Ivanov."); }
 	$amperV = "1.0.1";
 	$postdate = ((isset( $langDetails['dateFormat']) && !empty($langDetails['dateFormat'])) ? date($langDetails['dateFormat'], strtotime($page->dateRaw())) : $page->date());
 	function _make_it_rain ($html) {
