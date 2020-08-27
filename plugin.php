@@ -7,7 +7,7 @@
 	// Custom fields initialization
 	global $site;
 	$userFields = $site->customFields() ?? '{}';
-	if(!isset($userFields['amper'])){
+	if(!isset($userFields['_amper'])){
 	$amper_json = json_decode('{"_amper": {"type": "bool","label": "AMPER","tip": "Disable AMP pages for this content"}}', true);
 	$amper_final = json_encode(array_merge($userFields, $amper_json));
 	$site->set(array('customFields'=>$amper_final));
