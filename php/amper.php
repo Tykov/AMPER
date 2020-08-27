@@ -146,4 +146,4 @@ echo _make_it_rain($page->content());
 <!-- End Footer -->
 </body>
 </html>
-<?php die(); ?>
+<?php exit(0); ?>
