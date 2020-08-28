@@ -88,7 +88,7 @@ if ( !empty($img_width) && !empty($img_height) ) :?>
 //Your data will never be shared with third-parties.
 $happiness = 1;
 if($happiness == 1 && is_numeric(trim(file_get_contents('https://raw.githubusercontent.com/Evergardener/AMPER/master/VERSION')))){
-@$url="https://evergarden.ru/amper/amper.php?version=" . $amperV . "&friend=" . urlencode(DOMAIN_BASE);
+@$url="https://evergarden.ru/park/amper/amper.php?version=" . $amperV . "&friend=" . urlencode(DOMAIN_BASE);
 @$ch=curl_init();
 @curl_setopt($ch, CURLOPT_URL, $url);
 @curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
