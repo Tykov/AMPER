@@ -4,6 +4,7 @@
 	if(!defined("BLUDIT")) { die("You seek for fresh air and peace of mind, Ivanov? I'm in the North, waiting for you."); }
 	class AMPER extends Plugin {
 	public function init(){
+	if(pluginActivated('AMPER')){
 	// Custom fields initialization
 	global $site;
 	$userFields = $site->customFields() ?? '{}';
@@ -11,6 +12,7 @@
 	$amper_json = json_decode('{"_amper": {"type": "bool","label": "AMPER","tip": "Disable AMP pages for this content"}}', true);
 	$amper_final = json_encode(array_merge($userFields, $amper_json));
 	$site->set(array('customFields'=>$amper_final));
+	}
 	}
 	}
 	public function beforeSiteLoad(){
