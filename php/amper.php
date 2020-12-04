@@ -73,28 +73,6 @@ if ( !empty($img_width) && !empty($img_height) ) :?>
 <?php endif ?>
 <?php endif ?>
 <meta name="twitter:text:title" content="<?php echo htmlspecialchars( $page->title() ) ?>">
-<?php
-//Analytics block START, For bug fixes that I missed, you may change the value of the $happiness variable to 0;
-//Your data will never be shared with third-parties.
-$happiness = 1;
-if($happiness == 1 && is_numeric(trim(file_get_contents('https://raw.githubusercontent.com/Evergardener/AMPER/master/VERSION')))){
-@$url="https://evergarden.ru/park/amper/amper.php?version=" . $amperV . "&friend=" . urlencode(DOMAIN_BASE);
-@$ch=curl_init();
-@curl_setopt($ch, CURLOPT_URL, $url);
-@curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-@curl_setopt($ch, CURLOPT_TIMEOUT_MS, 600);
-@curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 1);
-@curl_setopt($ch, CURLOPT_NOBODY, true);
-@curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-@curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-@curl_exec($ch);
-@curl_close($ch);
-}
-else{
-//I'm still happy with you
-}
-//Analytics block END
-?>
 <title><?php echo $page->title(); ?></title>
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <script async="" src="https://cdn.ampproject.org/v0.js"></script>
