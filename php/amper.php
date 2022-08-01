@@ -42,7 +42,7 @@ you may not use this file except in compliance with the License.
 	return $html;
 	}
 ?>
-<html ⚡="">
+<html ⚡="" lang="en">
 <head>
 <meta charset="utf-8">
 <?php //echo Theme::metaTags('title'); ?>
